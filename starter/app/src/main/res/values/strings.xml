@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_text">Login</string>
+    <string name="password_hint_text">password</string>
+    <string name="email_hint_text">email</string>
 </resources>
