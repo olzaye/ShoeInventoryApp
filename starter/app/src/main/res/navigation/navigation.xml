@@ -46,7 +46,6 @@
         <action
             android:id="@+id/action_fragment_show_list_to_shoeDetailFragment"
             app:destination="@id/fragment_shoe_detail"
-            app:launchSingleTop="false"
             app:popUpTo="@id/fragment_instructions" />
         <action
             android:id="@+id/action_fragment_show_list_to_loginFragment2"
@@ -62,5 +61,10 @@
         <argument
             android:name="Shoe"
             app:argType="com.udacity.shoestore.models.Shoe" />
+        <action
+            android:id="@+id/action_fragment_shoe_detail_to_fragment_show_list"
+            app:destination="@id/fragment_show_list"
+            app:popUpTo="@id/fragment_show_list"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

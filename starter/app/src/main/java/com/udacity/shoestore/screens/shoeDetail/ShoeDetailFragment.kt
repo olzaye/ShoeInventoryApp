@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 import com.udacity.shoestore.models.Shoe
@@ -45,11 +46,11 @@ class ShoeDetailFragment : Fragment() {
                     binding.descriptionTextInputEditText.text.toString(), listOf()
                 )
             )
-            activity?.onBackPressed()
+           it.findNavController().navigate(ShoeDetailFragmentDirections.actionFragmentShoeDetailToFragmentShowList())
         }
 
         binding.cancelButton.setOnClickListener {
-            activity?.onBackPressed()
+            it.findNavController().navigate(ShoeDetailFragmentDirections.actionFragmentShoeDetailToFragmentShowList())
         }
 
         return binding.root

@@ -18,4 +18,5 @@
     <string name="register_text">register</string>
     <string name="email_text">Email:</string>
     <string name="password_text">Password:</string>
+    <string name="logout_menu_text">Logout</string>
 </resources>
