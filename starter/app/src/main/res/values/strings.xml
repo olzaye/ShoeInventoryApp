@@ -1,8 +1,21 @@
 <resources>
     <string name="app_name">ShoeStore</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="login_text">Login</string>
-    <string name="password_hint_text">password</string>
-    <string name="email_hint_text">email</string>
+    <string name="menu_instructions_text">Instructions</string>
+    <string name="instruction_title">Instruction Title</string>
+    <string name="instruction_message">Instruction Message</string>
+    <string name="menu_show_list_text">Show List</string>
+    <string name="show_detail_floating_actionbar">show Detail floating actionbar</string>
+    <string name="shoe_detail_header_text">Shoe Detail Header Text</string>
+    <string name="shoe_name_text">Shoe Name</string>
+    <string name="company_text">Company</string>
+    <string name="shoe_size_text">Shoe Size</string>
+    <string name="description">Description</string>
+    <string name="save_button_text">save</string>
+    <string name="welcome_text">Welcome</string>
+    <string name="welcome_message_text">Welcome Message</string>
+    <string name="register_text">register</string>
+    <string name="email_text">Email:</string>
+    <string name="password_text">Password:</string>
 </resources>

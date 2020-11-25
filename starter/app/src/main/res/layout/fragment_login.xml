@@ -6,21 +6,32 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".models.screens.login.LoginFragment">
+        tools:context=".screens.login.LoginFragment">
+
+        <TextView
+            android:id="@+id/email_text_view"
+            style="@style/Text.Black.16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:text="@string/email_text"
+            app:layout_constraintBottom_toBottomOf="@id/email_text_input_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/email_text_input_layout"
+            app:layout_constraintVertical_bias="0.84000003" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_text_input_layout"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_16dp"
             android:layout_marginEnd="@dimen/margin_16dp"
-            android:hint="@string/email_hint_text"
             app:layout_constraintBottom_toTopOf="@+id/password_text_input_layout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/label_barrier"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.32999998"
+            app:layout_constraintVertical_bias="0.36"
             app:layout_constraintVertical_chainStyle="packed">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -30,17 +41,28 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:id="@+id/password_text_view"
+            style="@style/Text.Black.16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:text="@string/password_text"
+            app:layout_constraintBottom_toBottomOf="@id/password_text_input_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/password_text_input_layout"
+            app:layout_constraintVertical_bias="0.85" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/password_text_input_layout"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_16dp"
             android:layout_marginEnd="@dimen/margin_16dp"
-            android:hint="@string/password_hint_text"
             app:layout_constraintBottom_toTopOf="@+id/sign_in_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/label_barrier"
             app:layout_constraintTop_toBottomOf="@+id/email_text_input_layout"
             app:layout_constraintVertical_chainStyle="packed">
 
@@ -57,13 +79,34 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_16dp"
             android:layout_marginEnd="@dimen/margin_16dp"
+            android:layout_marginTop="16dp"
             android:text="@string/login_text"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/register_button"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/password_text_input_layout"
             app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:text="@string/register_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sign_in_button"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/label_barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="right"
+            app:constraint_referenced_ids="password_text_view,email_text_view" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
