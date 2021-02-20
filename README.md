@@ -1,7 +1,3 @@
-# README
-
-Below is a template provided for use when building your README file for students.
-
 # Shoe Store App
 
 It's a project which is more to learn about
